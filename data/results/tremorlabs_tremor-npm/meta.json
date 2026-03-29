@@ -1,0 +1,91 @@
+{
+  "id": "tremorlabs_tremor-npm",
+  "url": "https://github.com/tremorlabs/tremor-npm",
+  "framework": "react",
+  "stars": 16469,
+  "analysisHistory": [
+    {
+      "apsVersion": "0.6.0",
+      "date": "2026-03-29T02:04:28.843Z",
+      "fileCount": 212,
+      "filesByExtension": {
+        ".yaml": 7,
+        ".md": 4,
+        ".json": 3,
+        ".js": 10,
+        ".png": 3,
+        ".svg": 10,
+        ".tsx": 210,
+        ".ts": 79,
+        ".css": 1
+      },
+      "totalIssues": 0,
+      "issuesPerFile": 0,
+      "sniffersRun": [
+        "react/prop-explosion",
+        "react/god-hook",
+        "react/prop-drilling",
+        "express/god-routes",
+        "express/missing-error-handling",
+        "express/fat-controllers",
+        "express/no-input-validation",
+        "express/callback-hell",
+        "express/hardcoded-secrets",
+        "nestjs/god-service",
+        "nestjs/missing-dtos",
+        "nestjs/business-logic-in-controllers",
+        "nestjs/missing-guards",
+        "nestjs/magic-strings"
+      ],
+      "snifferConfig": {
+        "prop-explosion": {
+          "enabled": true,
+          "threshold": 7,
+          "severity": "warning"
+        },
+        "god-hook": {
+          "enabled": true,
+          "maxUseState": 4,
+          "maxUseEffect": 3,
+          "maxTotalHooks": 10,
+          "severity": "warning"
+        },
+        "prop-drilling": {
+          "enabled": true,
+          "severity": "warning",
+          "whitelistedProps": [
+            "className",
+            "style",
+            "children",
+            "key",
+            "ref",
+            "id",
+            "data-testid"
+          ]
+        }
+      },
+      "frameworksDetected": [
+        "react"
+      ],
+      "durationMs": 142,
+      "errors": 0,
+      "perSnifferCounts": {},
+      "perSnifferDurations": {
+        "react/prop-explosion": 12,
+        "react/god-hook": 1,
+        "react/prop-drilling": 9,
+        "express/god-routes": 10,
+        "express/missing-error-handling": 10,
+        "express/fat-controllers": 1,
+        "express/no-input-validation": 6,
+        "express/callback-hell": 2,
+        "express/hardcoded-secrets": 4,
+        "nestjs/god-service": 5,
+        "nestjs/missing-dtos": 9,
+        "nestjs/business-logic-in-controllers": 9,
+        "nestjs/missing-guards": 12,
+        "nestjs/magic-strings": 20
+      }
+    }
+  ]
+}

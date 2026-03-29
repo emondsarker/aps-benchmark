@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "fileCount": 107,
+    "totalIssues": 0,
+    "date": "2026-03-29",
+    "sniffersRun": [
+      "react/prop-explosion",
+      "react/god-hook",
+      "react/prop-drilling",
+      "express/god-routes",
+      "express/missing-error-handling",
+      "express/fat-controllers",
+      "express/no-input-validation",
+      "express/callback-hell",
+      "express/hardcoded-secrets",
+      "nestjs/god-service",
+      "nestjs/missing-dtos",
+      "nestjs/business-logic-in-controllers",
+      "nestjs/missing-guards",
+      "nestjs/magic-strings"
+    ]
+  },
+  "files": {},
+  "summary": {},
+  "errors": [],
+  "_benchmark": {
+    "apsVersion": "0.6.0",
+    "repoId": "ant-design_ant-design-pro",
+    "analyzedAt": "2026-03-29T02:18:16.395Z",
+    "durationMs": 105,
+    "filesByExtension": {
+      ".js": 4,
+      ".yml": 11,
+      ".md": 13,
+      ".json": 5,
+      ".ts": 89,
+      ".ico": 1,
+      ".png": 3,
+      ".svg": 2,
+      ".tsx": 15,
+      ".less": 1,
+      ".snap": 1,
+      ".jsx": 1
+    },
+    "snifferConfig": {
+      "prop-explosion": {
+        "enabled": true,
+        "threshold": 7,
+        "severity": "warning"
+      },
+      "god-hook": {
+        "enabled": true,
+        "maxUseState": 4,
+        "maxUseEffect": 3,
+        "maxTotalHooks": 10,
+        "severity": "warning"
+      },
+      "prop-drilling": {
+        "enabled": true,
+        "severity": "warning",
+        "whitelistedProps": [
+          "className",
+          "style",
+          "children",
+          "key",
+          "ref",
+          "id",
+          "data-testid"
+        ]
+      }
+    },
+    "frameworksDetected": [
+      "react",
+      "express"
+    ],
+    "perSnifferDurations": {
+      "react/prop-explosion": 10,
+      "react/god-hook": 3,
+      "react/prop-drilling": 7,
+      "express/god-routes": 7,
+      "express/missing-error-handling": 7,
+      "express/fat-controllers": 5,
+      "express/no-input-validation": 4,
+      "express/callback-hell": 6,
+      "express/hardcoded-secrets": 5,
+      "nestjs/god-service": 3,
+      "nestjs/missing-dtos": 5,
+      "nestjs/business-logic-in-controllers": 6,
+      "nestjs/missing-guards": 4,
+      "nestjs/magic-strings": 19
+    }
+  }
+}

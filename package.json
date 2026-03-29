@@ -1,0 +1,24 @@
+{
+  "name": "aps-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automated benchmark & evaluation pipeline for anti-pattern-sniffer",
+  "type": "module",
+  "scripts": {
+    "discover": "tsx scripts/discover-repos.ts",
+    "clone": "tsx scripts/clone-repos.ts",
+    "analyze": "tsx scripts/run-analysis.ts",
+    "evaluate": "tsx scripts/evaluate.ts",
+    "aggregate": "tsx scripts/aggregate.ts",
+    "pipeline": "tsx scripts/full-pipeline.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "anti-pattern-sniffer": "file:../react-anti-pattern-sniffer"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.0.0"
+  }
+}

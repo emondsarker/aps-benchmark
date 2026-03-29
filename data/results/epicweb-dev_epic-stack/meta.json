@@ -1,0 +1,107 @@
+{
+  "id": "epicweb-dev_epic-stack",
+  "url": "https://github.com/epicweb-dev/epic-stack",
+  "framework": "react",
+  "stars": 5500,
+  "analysisHistory": [
+    {
+      "apsVersion": "0.6.0",
+      "date": "2026-03-29T02:18:16.502Z",
+      "fileCount": 140,
+      "filesByExtension": {
+        ".mdc": 1,
+        ".example": 1,
+        ".md": 101,
+        ".yml": 2,
+        ".json": 9,
+        ".code-snippets": 1,
+        ".png": 23,
+        ".svg": 49,
+        ".tsx": 71,
+        ".ts": 81,
+        ".jpg": 12,
+        ".css": 1,
+        ".js": 2,
+        ".toml": 2,
+        ".dockerignore": 1,
+        ".sql": 2,
+        ".prisma": 1,
+        ".ico": 1,
+        ".webmanifest": 1,
+        ".mjs": 1
+      },
+      "totalIssues": 12,
+      "issuesPerFile": 0.09,
+      "sniffersRun": [
+        "react/prop-explosion",
+        "react/god-hook",
+        "react/prop-drilling",
+        "express/god-routes",
+        "express/missing-error-handling",
+        "express/fat-controllers",
+        "express/no-input-validation",
+        "express/callback-hell",
+        "express/hardcoded-secrets",
+        "nestjs/god-service",
+        "nestjs/missing-dtos",
+        "nestjs/business-logic-in-controllers",
+        "nestjs/missing-guards",
+        "nestjs/magic-strings"
+      ],
+      "snifferConfig": {
+        "prop-explosion": {
+          "enabled": true,
+          "threshold": 7,
+          "severity": "warning"
+        },
+        "god-hook": {
+          "enabled": true,
+          "maxUseState": 4,
+          "maxUseEffect": 3,
+          "maxTotalHooks": 10,
+          "severity": "warning"
+        },
+        "prop-drilling": {
+          "enabled": true,
+          "severity": "warning",
+          "whitelistedProps": [
+            "className",
+            "style",
+            "children",
+            "key",
+            "ref",
+            "id",
+            "data-testid"
+          ]
+        }
+      },
+      "frameworksDetected": [
+        "react",
+        "express"
+      ],
+      "durationMs": 102,
+      "errors": 0,
+      "perSnifferCounts": {
+        "magic-strings": 2,
+        "god-routes": 1,
+        "missing-error-handling": 9
+      },
+      "perSnifferDurations": {
+        "react/prop-explosion": 9,
+        "react/god-hook": 2,
+        "react/prop-drilling": 10,
+        "express/god-routes": 5,
+        "express/missing-error-handling": 4,
+        "express/fat-controllers": 4,
+        "express/no-input-validation": 5,
+        "express/callback-hell": 5,
+        "express/hardcoded-secrets": 1,
+        "nestjs/god-service": 6,
+        "nestjs/missing-dtos": 4,
+        "nestjs/business-logic-in-controllers": 5,
+        "nestjs/missing-guards": 6,
+        "nestjs/magic-strings": 15
+      }
+    }
+  ]
+}

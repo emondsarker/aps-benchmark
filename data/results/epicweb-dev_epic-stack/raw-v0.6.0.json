@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "fileCount": 140,
+    "totalIssues": 12,
+    "date": "2026-03-29",
+    "sniffersRun": [
+      "react/prop-explosion",
+      "react/god-hook",
+      "react/prop-drilling",
+      "express/god-routes",
+      "express/missing-error-handling",
+      "express/fat-controllers",
+      "express/no-input-validation",
+      "express/callback-hell",
+      "express/hardcoded-secrets",
+      "nestjs/god-service",
+      "nestjs/missing-dtos",
+      "nestjs/business-logic-in-controllers",
+      "nestjs/missing-guards",
+      "nestjs/magic-strings"
+    ]
+  },
+  "files": {
+    "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/app/routes/resources/theme-switch.tsx": [
+      {
+        "snifferName": "magic-strings",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/app/routes/resources/theme-switch.tsx",
+        "line": 55,
+        "column": 41,
+        "message": "String \"system\" appears in 3 conditional expressions. Extract to a constant or TypeScript enum.",
+        "severity": "warning",
+        "suggestion": "**Extract repeated strings to constants or enums:**\n```typescript\n// Option 1: Constants\nconst SYSTEM = 'system';\n\n// Option 2: Enum\nenum Status {\n  System = 'system',\n}\n```\n- Centralizes the value so typos are caught at compile time\n- Makes renaming easier and safer",
+        "details": {
+          "value": "system",
+          "occurrences": 3,
+          "minOccurrences": 3
+        }
+      }
+    ],
+    "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/app/routes/settings/profile/index.tsx": [
+      {
+        "snifferName": "magic-strings",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/app/routes/settings/profile/index.tsx",
+        "line": 271,
+        "column": 21,
+        "message": "String \"idle\" appears in 3 conditional expressions. Extract to a constant or TypeScript enum.",
+        "severity": "warning",
+        "suggestion": "**Extract repeated strings to constants or enums:**\n```typescript\n// Option 1: Constants\nconst IDLE = 'idle';\n\n// Option 2: Enum\nenum Status {\n  Idle = 'idle',\n}\n```\n- Centralizes the value so typos are caught at compile time\n- Makes renaming easier and safer",
+        "details": {
+          "value": "idle",
+          "occurrences": 3,
+          "minOccurrences": 3
+        }
+      }
+    ],
+    "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/server/index.ts": [
+      {
+        "snifferName": "god-routes",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/server/index.ts",
+        "line": 20,
+        "column": 11,
+        "message": "File defines 13 route handlers (threshold: 10). Consider splitting into separate route files by domain.",
+        "severity": "warning",
+        "suggestion": "**Split routes by domain/resource:**\n- Create separate route files (e.g., `users.routes.ts`, `orders.routes.ts`)\n- Use `express.Router()` to group related routes\n- Mount sub-routers in the main app: `app.use('/users', usersRouter)`",
+        "details": {
+          "routeCount": 13,
+          "maxRoutes": 10
+        }
+      }
+    ],
+    "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/cache-server.ts": [
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/cache-server.ts",
+        "line": 25,
+        "column": 16,
+        "message": "Async GET handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      }
+    ],
+    "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/github.ts": [
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/github.ts",
+        "line": 122,
+        "column": 10,
+        "message": "Async POST handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      },
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/github.ts",
+        "line": 142,
+        "column": 1,
+        "message": "Async GET handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      },
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/github.ts",
+        "line": 149,
+        "column": 4,
+        "message": "Async GET handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      },
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/github.ts",
+        "line": 159,
+        "column": 17,
+        "message": "Async GET handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      },
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/github.ts",
+        "line": 166,
+        "column": 57,
+        "message": "Async GET handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      }
+    ],
+    "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/resend.ts": [
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/resend.ts",
+        "line": 7,
+        "column": 24,
+        "message": "Async POST handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      }
+    ],
+    "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/tigris.ts": [
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/tigris.ts",
+        "line": 28,
+        "column": 21,
+        "message": "Async PUT handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      },
+      {
+        "snifferName": "missing-error-handling",
+        "filePath": "/home/emon/personal/aps-benchmark/data/cache/epicweb-dev_epic-stack/tests/mocks/tigris.ts",
+        "line": 44,
+        "column": 25,
+        "message": "Async GET handler has no try-catch block and no error middleware found in file",
+        "severity": "warning",
+        "suggestion": "**Add error handling to async route handlers:**\n- Wrap the handler body in a try-catch block\n- Or add centralized error middleware: `app.use((err, req, res, next) => { ... })`\n- Or use a wrapper like `express-async-errors` or a custom `asyncHandler` utility"
+      }
+    ]
+  },
+  "summary": {
+    "magic-strings": {
+      "count": 2,
+      "severity": "warning"
+    },
+    "god-routes": {
+      "count": 1,
+      "severity": "warning"
+    },
+    "missing-error-handling": {
+      "count": 9,
+      "severity": "warning"
+    }
+  },
+  "errors": [],
+  "_benchmark": {
+    "apsVersion": "0.6.0",
+    "repoId": "epicweb-dev_epic-stack",
+    "analyzedAt": "2026-03-29T02:18:16.502Z",
+    "durationMs": 102,
+    "filesByExtension": {
+      ".mdc": 1,
+      ".example": 1,
+      ".md": 101,
+      ".yml": 2,
+      ".json": 9,
+      ".code-snippets": 1,
+      ".png": 23,
+      ".svg": 49,
+      ".tsx": 71,
+      ".ts": 81,
+      ".jpg": 12,
+      ".css": 1,
+      ".js": 2,
+      ".toml": 2,
+      ".dockerignore": 1,
+      ".sql": 2,
+      ".prisma": 1,
+      ".ico": 1,
+      ".webmanifest": 1,
+      ".mjs": 1
+    },
+    "snifferConfig": {
+      "prop-explosion": {
+        "enabled": true,
+        "threshold": 7,
+        "severity": "warning"
+      },
+      "god-hook": {
+        "enabled": true,
+        "maxUseState": 4,
+        "maxUseEffect": 3,
+        "maxTotalHooks": 10,
+        "severity": "warning"
+      },
+      "prop-drilling": {
+        "enabled": true,
+        "severity": "warning",
+        "whitelistedProps": [
+          "className",
+          "style",
+          "children",
+          "key",
+          "ref",
+          "id",
+          "data-testid"
+        ]
+      }
+    },
+    "frameworksDetected": [
+      "react",
+      "express"
+    ],
+    "perSnifferDurations": {
+      "react/prop-explosion": 9,
+      "react/god-hook": 2,
+      "react/prop-drilling": 10,
+      "express/god-routes": 5,
+      "express/missing-error-handling": 4,
+      "express/fat-controllers": 4,
+      "express/no-input-validation": 5,
+      "express/callback-hell": 5,
+      "express/hardcoded-secrets": 1,
+      "nestjs/god-service": 6,
+      "nestjs/missing-dtos": 4,
+      "nestjs/business-logic-in-controllers": 5,
+      "nestjs/missing-guards": 6,
+      "nestjs/magic-strings": 15
+    }
+  }
+}
